@@ -1,7 +1,7 @@
 {
 	"game": {
-		"name": "DefaultStateBasedGame",
-		"name_safe": "defaultstatebasedgame",
+		"name": "Default Game",
+		"name_safe": "defaultgame",
 		"description": "An ARK2D game source template.",
 
 		"class_name": "DefaultGame",
