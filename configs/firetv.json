@@ -1,0 +1,13 @@
+{
+	"name": "Fire TV",
+	"folder": "firetv",
+	"platform": "firetv",
+	"clean": true,
+	"defines": [
+	
+	],
+	"include_dirs": [
+	
+	]
+	
+}

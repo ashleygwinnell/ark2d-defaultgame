@@ -1,0 +1,54 @@
+{
+	"game": {
+		"name": "DefaultStateBasedGame",
+		"name_safe": "defaultstatebasedgame",
+		"description": "An ARK2D game source template.",
+
+		"class_name": "DefaultGame",
+		"orientation": "landscape",
+		"clearcolor": "#000000",
+		"version": "0.1.0",
+
+		"folders": {
+			"preproduction": "__preproduction",
+			"resources": "data",
+			"output": "build"
+		}
+	},
+	"developer": {
+		"name": "Your Name",
+		"name_safe": "yourname"
+	},
+	"src_files": [
+		"src/main.cpp",
+		"src/DefaultGame.cpp",
+
+        "src/states/BlankState.cpp",
+		"src/states/InGameState.cpp",
+        "src/states/InstructionsState.cpp",
+        "src/states/MenuState.cpp",
+        "src/states/SplashState.cpp",
+        "src/states/SummaryState.cpp",
+
+		"src/Resources.rc"
+	],
+	"mkdirs": [
+
+	],
+	"resources": {
+        "spritesheets": [
+            {
+                "name": "test",
+                "output_folder": "data",
+                "max_texture_width": 64,
+                "max_texture_height": 64,
+                "spacing": 1,
+                "output": "test",
+                "format": "JSON",
+                "files": [
+
+                ]
+            }
+        ]
+    }
+}

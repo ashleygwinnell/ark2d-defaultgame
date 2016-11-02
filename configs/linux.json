@@ -1,0 +1,15 @@
+{
+	"name": "Linux",
+	"folder": "linux",
+	"platform": "linux",
+	"clean": false,
+	"defines": [
+	
+	],
+	"include_dirs": [
+	
+	],
+	"libs": [
+	
+	]
+}

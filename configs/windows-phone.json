@@ -1,0 +1,55 @@
+{
+	"name": "Windows Phone 8",
+	"folder": "windows-phone",
+	"platform": "windows-phone",
+	"clean": true,
+	"defines": [
+		"USING_FMOD"
+	],
+	"include_dirs": [
+
+	],
+	"libs": [
+	
+	],
+	"windows-phone": {
+		"game_width": 320, 
+        "game_height": 480,
+        "icon": {
+            "square_44x44_scale100":   	"%PREPRODUCTION_DIR%/icon/wp8/square_44x44.png",
+            "square_44x44_scale140":   	"%PREPRODUCTION_DIR%/icon/wp8/square_62x62.png",
+            "square_44x44_scale240":   	"%PREPRODUCTION_DIR%/icon/wp8/square_106x106.png",
+            "square_71x71_scale100":   	"%PREPRODUCTION_DIR%/icon/wp8/square_71x71.png",
+            "square_71x71_scale140":   	"%PREPRODUCTION_DIR%/icon/wp8/square_99x99.png",
+            "square_71x71_scale240":   	"%PREPRODUCTION_DIR%/icon/wp8/square_170x170.png",
+            "square_150x150_scale100": 	"%PREPRODUCTION_DIR%/icon/wp8/square_150x150.png",
+            "square_150x150_scale140": 	"%PREPRODUCTION_DIR%/icon/wp8/square_210x210.png",
+            "square_150x150_scale240": 	"%PREPRODUCTION_DIR%/icon/wp8/square_360x360.png",
+            "wide_310x150_scale100":   	"%PREPRODUCTION_DIR%/icon/wp8/wide_310x150.png",
+            "wide_310x150_scale140":   	"%PREPRODUCTION_DIR%/icon/wp8/wide_434x210.png",
+            "wide_310x150_scale240":   	"%PREPRODUCTION_DIR%/icon/wp8/wide_744x360.png",
+            "store_scale100": 			"%PREPRODUCTION_DIR%/icon/wp8/store_50x50.png",
+            "store_scale140": 			"%PREPRODUCTION_DIR%/icon/wp8/store_70x70.png",
+            "store_scale240": 			"%PREPRODUCTION_DIR%/icon/wp8/store_120x120.png",
+            "badge_scale100": 			"%PREPRODUCTION_DIR%/icon/wp8/badge_24x24.png",
+            "badge_scale140": 			"%PREPRODUCTION_DIR%/icon/wp8/badge_33x33.png",
+            "badge_scale240": 			"%PREPRODUCTION_DIR%/icon/wp8/badge_58x58.png",
+            "splash_scale100": 			"%PREPRODUCTION_DIR%/icon/wp8/splash_480x800.png",
+            "splash_scale140": 			"%PREPRODUCTION_DIR%/icon/wp8/splash_672x1120.png",
+            "splash_scale240": 			"%PREPRODUCTION_DIR%/icon/wp8/splash_1152x1920.png"
+        },
+		"native_libraries": [
+	        {
+		        "name": "fmod",
+		       	"arm": [
+		       		"lib/wp8/fmod/fmod_ARM.lib",
+		       		"lib/wp8/fmod/fmod_ARM.dll"
+		       	],
+			    "x86": [
+			    	"lib/wp8/fmod/fmod_X86.lib",
+			    	"lib/wp8/fmod/fmod_X86.dll"
+			    ]
+	        }
+        ]
+	}
+}

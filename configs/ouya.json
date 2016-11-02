@@ -1,0 +1,24 @@
+{
+	"name": "Ouya",
+	"folder": "ouya-osx",
+	"platform": "ouya",
+	"clean": true,
+	"defines": [
+
+	],
+	"include_dirs": [
+
+	],
+	"libs": [
+
+	],
+
+	"ouya": {
+		"sdk": "~/.android/OUYA-ODK",
+        "developer_id": "xxx",
+        "app_icon": "%PREPRODUCTION_DIR%/icon/96.png",
+        "store_icon": "%PREPRODUCTION_DIR%/promo/ouya/store.png",
+        "key_file": "%PREPRODUCTION_DIR%/promo/ouya/key.der",
+        "entitlement_id": "example_game"
+    }
+}

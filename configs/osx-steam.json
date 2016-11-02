@@ -1,0 +1,15 @@
+{
+	"name": "OS X",
+	"folder": "osx-steam",
+	"platform": "osx",
+	"clean": false,
+	"defines": [
+		"ARK2D_STEAM"
+	],
+	"include_dirs": [
+		"%PREPRODUCTION_DIR%/steam/sdk/public"
+	],
+	"libs": [
+		"%PREPRODUCTION_DIR%/steam/sdk/redistributable_bin/linux64/libsteam_api.so"
+	]
+}
