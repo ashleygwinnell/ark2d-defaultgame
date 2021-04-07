@@ -18,6 +18,10 @@ class MenuState : public GameState {
 
 		Image* logo;
 
+		ARK::Core::Font::FTFont* ftfont;
+		ARK::Core::Font::FTFont* ftfont_jp;
+		ARK::Core::Font::FTFont* ftfont_ko;
+
 		MenuState();
 		void enter(GameContainer* container, StateBasedGame* game, GameState* from);
 		void leave(GameContainer* container, StateBasedGame* game, GameState* to);

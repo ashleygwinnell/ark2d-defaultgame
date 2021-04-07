@@ -1,6 +1,7 @@
 
 #include "MenuState.h"
 #include "../DefaultGame.h"
+#include <ARK2D/Core/Font/FTFont.h>
 
 MenuState::MenuState():
 	GameState() {
@@ -22,6 +23,18 @@ void MenuState::leave(GameContainer* container, StateBasedGame* game, GameState*
 void MenuState::init(GameContainer* container, StateBasedGame* game) {
 	DefaultGame* dg = DefaultGame::getInstance();
 	m_selectedIndex = 0;
+
+	//ARK2D::getRenderer()->getDefaultFont()->style.outlineThickness = 1;
+	ARK2D::getRenderer()->getDefaultFont()->style.shadowX = ARK2D::getRenderer()->getDefaultFont()->style.shadowY = 1;
+
+	Renderer::setInterpolation(Renderer::INTERPOLATION_LINEAR);
+	ftfont = new ARK::Core::Font::FTFont("Arial Unicode.ttf", 24);
+	ftfont->style.outlineThickness = 2;
+	ftfont_jp = new ARK::Core::Font::FTFont("corp_round_v1_jp.ttf", 24);
+	ftfont_ko = new ARK::Core::Font::FTFont("BMJUA_ttf_ko.ttf", 24);
+    //ftfont = new ARK::Core::Font::FTFont("Arial.ttf", 24);
+
+    Renderer::setInterpolation(Renderer::INTERPOLATION_NEAREST);
 }
 
 void MenuState::update(GameContainer* container, StateBasedGame* game, GameTimer* timer) {
@@ -69,10 +82,52 @@ void MenuState::render(GameContainer* container, StateBasedGame* game, Renderer*
 	InGameState* igs = dg->stateInGame;
 	r->drawString("Menu", 20, 20, Renderer::ALIGN_LEFT, Renderer::ALIGN_TOP);
 
+	r->setDrawColor(Color::blue);
+	r->fillRect(0,0,container->getWidth(), container->getHeight());
 	r->setDrawColor(Color::white);
+    //r->getFont()->drawString("hi 今日のスペシャル：マフィン！ わーい！yo", 20, 40);
+    r->getFont()->drawString("hi yo", 20, 60);
+    r->getFont()->drawString(StringUtil::append("lh: ", ftfont->getLineHeight()), 20, 80);
+
+    r->setDrawColor(Color::blue);
+    r->drawLine(20,100,120,100);
+    r->drawLine(20,124,120,124);
+    //r->drawLine(20,120,120,120);
+
+    r->setDrawColor(Color::white);
+    //ftfont->drawString("hi, yo 2!", 20, 100);
+    // Japanese
+    // G7 Cute Pop Bold
+    // idfont FTMaru (あいでぃーぽっぷふとまる)
+    // Corporate Font Rounded.
+    // mini-wakuwaku
+    // ..
+    // Korean
+    // BM JUA
+
+    ftfont->drawStringCenteredAt(string("HEY YA! (hello world)!"), container->getWidth()*0.5f, 100);
+
+    //ftfont->drawString(string("hi 今日のスペシャル：マフィン！ わーい！yo"), 20, 100);
+    //ftfont_jp->drawString(string("hi 今日のスペシャル：マフィン！ わーい！yo"), 20, 140);
+    //ftfont_ko->drawString(string("장식하는 두손을 실현에 부패를 수 때문이다."), 20, 180);
+
+	//ftfont->drawStringCenteredAt(string("hi 今日のスペシャル：マフィン！ わーい！yo"), container->getWidth()*0.5f, 100);
+    ftfont_jp->drawStringCenteredAt(string("読み込んでいます..."), container->getWidth()*0.5f, 140);
+    ftfont_jp->drawStringCenteredAt(string("すべてのロックを解除"), container->getWidth()*0.5f, 180);
+
+    ftfont_jp->getStringWidth("すべてのロックを解除");
+
+    //ftfont_ko->drawStringCenteredAt(string("장식하는 두손을 실현에 부패를 수 때문이다."), container->getWidth()*0.5f, 180);
+    //ftfont_ko->drawStringFitWidth(string("장식하는 두손을 실현에 부패를 수 때문이다."), container->getWidth()*0.5f, 230, Renderer::ALIGN_CENTER, Renderer::ALIGN_CENTER, 0.0f, 1.0f, 250);
 
 	int rooty = 320;
 	int wid = (signed int) container->getWidth();
+
+    //r->texturedRect(ftfont->m_data->texture, 200,200, ftfont->m_data->textureWidth,ftfont->m_data->textureHeight);
+
+ //    r->setDrawColor(Color::red);
+ //    r->drawRect(200,200, ftfont->m_data->textureWidth,ftfont->m_data->textureHeight);
+     r->setDrawColor(Color::white);
 
 	if (m_selectedIndex == MENU_PLAY) {
 		r->getFont()->drawStringCenteredAt("< Play >", wid/2, rooty);

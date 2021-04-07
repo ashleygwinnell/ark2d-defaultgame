@@ -1,5 +1,6 @@
 
 #include <ARK2D/Core/GameContainer.h>
+#include <ARK2D/Tests/+.h>
 #include "DefaultGame.h"
 
 int main(int argc, char** argv) {
@@ -8,6 +9,8 @@ int main(int argc, char** argv) {
 	ARK2D::getLog()->setFilter(ARK::Core::Log::TYPE_VERBOSE);
 	//ARK::Tests::NetTest::start();
 	//ARK::Tests::GamepadsTest::start();
+	// ARK::Tests::CollisionTest::start();
+	// return 0;
 	//ARK::Tests::ShaderTest::start();
 	//return 0;
 
